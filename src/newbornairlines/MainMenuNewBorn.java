@@ -40,13 +40,23 @@ public class MainMenuNewBorn extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Please choice any of our available options");
+        jLabel1.setText("Please choose any of our available options");
 
         purchaseTicketClick.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         purchaseTicketClick.setText("Purchase a Ticket");
+        purchaseTicketClick.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                purchaseTicketClickActionPerformed(evt);
+            }
+        });
 
         exitButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         exitButton.setText("Exit");
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +95,15 @@ public class MainMenuNewBorn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void purchaseTicketClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseTicketClickActionPerformed
+        PurchasePortalGUI gui=new PurchasePortalGUI();
+        gui.setVisible(true);
+    }//GEN-LAST:event_purchaseTicketClickActionPerformed
+
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_exitButtonActionPerformed
 
     /**
      * @param args the command line arguments
