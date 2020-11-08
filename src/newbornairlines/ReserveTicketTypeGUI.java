@@ -10,7 +10,9 @@ package newbornairlines;
  * @author JRios15_17
  */
 public class ReserveTicketTypeGUI extends javax.swing.JFrame {
-
+    private String departTime;
+    private String departingCity;
+    private String destCity;
     /**
      * Creates new form ReserveTicketTypeGUI
      */
@@ -114,15 +116,27 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void economyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_economyButtonActionPerformed
-        // TODO add your handling code here:
+        EconomyChoicesGUI gui=new EconomyChoicesGUI();
+        gui.myTicket.setDepartCity(departingCity);
+        gui.myTicket.setDepartTime(departTime);
+        gui.myTicket.setDestination(destCity);
+        gui.setVisible(true);
     }//GEN-LAST:event_economyButtonActionPerformed
 
     private void businessButtonjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_businessButtonjActionPerformed
-        // TODO add your handling code here:
+        BusinessChoicesGUI gui=new BusinessChoicesGUI();
+        gui.myTicket.setDepartCity(departingCity);
+        gui.myTicket.setDepartTime(departTime);
+        gui.myTicket.setDestination(destCity);
+        gui.setVisible(true);
     }//GEN-LAST:event_businessButtonjActionPerformed
 
     private void firstClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstClassButtonActionPerformed
-        // TODO add your handling code here:
+        FIrstClassChoicesGUI gui=new FIrstClassChoicesGUI();
+        gui.myTicket.setDepartCity(departingCity);
+        gui.myTicket.setDepartTime(departTime);
+        gui.myTicket.setDestination(destCity);
+        gui.setVisible(true);
     }//GEN-LAST:event_firstClassButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
@@ -171,4 +185,46 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
     private javax.swing.JButton firstClassButton;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the departTime
+     */
+    public String getDepartTime() {
+        return departTime;
+    }
+
+    /**
+     * @param departTime the departTime to set
+     */
+    public void setDepartTime(String departTime) {
+        this.departTime = departTime;
+    }
+
+    /**
+     * @return the departingCity
+     */
+    public String getDepartingCity() {
+        return departingCity;
+    }
+
+    /**
+     * @param departingCity the departingCity to set
+     */
+    public void setDepartingCity(String departingCity) {
+        this.departingCity = departingCity;
+    }
+
+    /**
+     * @return the destCity
+     */
+    public String getDestCity() {
+        return destCity;
+    }
+
+    /**
+     * @param destCity the destCity to set
+     */
+    public void setDestCity(String destCity) {
+        this.destCity = destCity;
+    }
 }

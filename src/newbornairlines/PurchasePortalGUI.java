@@ -168,14 +168,22 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
 
     private void reserveTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserveTime1ActionPerformed
         ReserveTicketTypeGUI gui=new ReserveTicketTypeGUI();
+        gui.setDepartTime("10 AM - 11:30 AM");
+        gui.setDepartingCity("Greensboro, NC");
+        gui.setDestCity("Queens, NY");
         gui.setVisible(true);
     }//GEN-LAST:event_reserveTime1ActionPerformed
 
     private void reserveTime2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserveTime2ActionPerformed
         ReserveTicketTypeGUI gui=new ReserveTicketTypeGUI();
+        gui.setDepartTime("2 PM - 3:30 AM");
+        gui.setDepartingCity("Greensboro, NC");
+        gui.setDestCity("Queens, NY");
         gui.setVisible(true);
     }//GEN-LAST:event_reserveTime2ActionPerformed
 
+    
+    
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         setVisible(false);
     }//GEN-LAST:event_exitButtonActionPerformed

@@ -15,9 +15,9 @@ public class EconomyTickets {
     private String destination;
     private int flightNum;
     private String departDate;
-    private int departTime;
+    private String departTime;
     private int seatNum;
-    private boolean windowSeat;
+    private int windowSeat;
     
     public EconomyTickets(){
         name="";
@@ -25,9 +25,9 @@ public class EconomyTickets {
         destination="";
         flightNum=-1;
         departDate="";
-        departTime=0;
+        departTime="";
         seatNum=0;
-        windowSeat=false;
+        windowSeat=0;
     }
 
     /**
@@ -103,14 +103,14 @@ public class EconomyTickets {
     /**
      * @return the departTime
      */
-    public int getDepartTime() {
+    public String getDepartTime() {
         return departTime;
     }
 
     /**
      * @param departTime the departTime to set
      */
-    public void setDepartTime(int departTime) {
+    public void setDepartTime(String departTime) {
         this.departTime = departTime;
     }
 
@@ -131,22 +131,30 @@ public class EconomyTickets {
     /**
      * @return the windowSeat
      */
-    public boolean isWindowSeat() {
+    
+    
+    public String display(){
+        boolean isWindSeat=false;
+        if(windowSeat==1){
+            isWindSeat=true;
+        }
+        return "Passenger's Name: "+name+"\n"+"Departing City: "+departCity+"\n"+"Destination: "+destination+"\n"+"Seat Number: "+seatNum+"\n"+"Date and Time of Departure: "+departDate+" at "+departTime+"\n"+"Is Window Seat? "+isWindSeat+"\n";
+    }
+    public void reserveTicket(){
+    
+    }
+
+    /**
+     * @return the windowSeat
+     */
+    public int getWindowSeat() {
         return windowSeat;
     }
 
     /**
      * @param windowSeat the windowSeat to set
      */
-    public void setWindowSeat(boolean windowSeat) {
+    public void setWindowSeat(int windowSeat) {
         this.windowSeat = windowSeat;
-    }
-    
-    public String display(){
-    
-        return "Passenger's Name: "+name+"\n"+"Departing City: "+departCity+"\n"+"Destination: "+destination+"\n"+"Seat Number: "+seatNum+"\n"+"Date and Time of Departure: "+departDate+" at "+departTime+"\n"+"Window Seat? "+windowSeat+"\n";
-    }
-    public void reserveTicket(){
-    
     }
 }

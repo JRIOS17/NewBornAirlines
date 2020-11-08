@@ -32,7 +32,9 @@ public class FirstClassTickets extends BusinessTickets {
     
     @Override
     public String display(){
-    
+        if(wine==null){
+            wine="No wine selected";
+        }
         return super.display()+"Wine of Choice: "+wine+"\n";
     }
     

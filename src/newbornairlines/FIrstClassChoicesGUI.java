@@ -5,19 +5,20 @@
  */
 package newbornairlines;
 import java.util.Scanner;
-import javax.swing.*;
+import java.awt.*; 
+import javax.swing.*; 
 /**
  *
  * @author JRios15_17
  */
-public class BusinessChoicesGUI extends javax.swing.JFrame {
-    BusinessTickets myTicket=new BusinessTickets();
+public class FIrstClassChoicesGUI extends javax.swing.JFrame {
+    FirstClassTickets myTicket=new FirstClassTickets();
     boolean wantsNuts=false;
     boolean wantsCookies=false;
     /**
      * Creates new form EconomyChoicesGUI
      */
-    public BusinessChoicesGUI() {
+    public FIrstClassChoicesGUI() {
         initComponents();
     }
 
@@ -44,6 +45,7 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
         buttonGroup12 = new javax.swing.ButtonGroup();
         buttonGroup13 = new javax.swing.ButtonGroup();
         buttonGroup14 = new javax.swing.ButtonGroup();
+        windowSeatEXLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         nameTextField = new javax.swing.JTextField();
@@ -56,6 +58,14 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
         cookiesRButton = new javax.swing.JRadioButton();
         nutsRButton = new javax.swing.JRadioButton();
         nonWindowSeatEXLabel1 = new javax.swing.JLabel();
+        nonWSeatLabel2 = new javax.swing.JLabel();
+        wineTextField = new javax.swing.JTextField();
+        windowSeatEXLabel1 = new javax.swing.JLabel();
+        windowSeatEXLabel2 = new javax.swing.JLabel();
+        windowSeatEXLabel4 = new javax.swing.JLabel();
+
+        windowSeatEXLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        windowSeatEXLabel3.setText("Please enter a Wine");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,7 +79,7 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
         nameTextField.setText("EX: Joe Exotic");
 
         wSeatLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        wSeatLabel.setText("Desired Seat Number:");
+        wSeatLabel.setText("Window Seat:");
 
         windowSeatTextFiels.setText("EX: 5");
 
@@ -112,45 +122,70 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
         nonWindowSeatEXLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         nonWindowSeatEXLabel1.setText("Please Choose 1");
 
+        nonWSeatLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        nonWSeatLabel2.setText("Wine:");
+
+        wineTextField.setText("EX: Don Perignon");
+
+        windowSeatEXLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        windowSeatEXLabel1.setText("Please Enter Name");
+
+        windowSeatEXLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        windowSeatEXLabel2.setText("Please enter a Wine");
+
+        windowSeatEXLabel4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        windowSeatEXLabel4.setText("(If no wine enter N/A)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(reserveButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(exitButton)
-                .addGap(99, 99, 99))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(wSeatLabel)
-                            .addComponent(nameLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(windowSeatTextFiels, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(reserveButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exitButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(31, 167, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(windowSeatEXLabel)
-                .addGap(44, 44, 44))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nonWSeatLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(cookiesRButton)
-                .addGap(18, 18, 18)
-                .addComponent(nutsRButton)
-                .addGap(74, 74, 74)
-                .addComponent(nonWindowSeatEXLabel1)
-                .addContainerGap())
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(wSeatLabel)
+                                    .addComponent(nameLabel)
+                                    .addComponent(nonWSeatLabel1)
+                                    .addComponent(nonWSeatLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(windowSeatEXLabel1))
+                                    .addComponent(windowSeatTextFiels, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cookiesRButton)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(nutsRButton)
+                                        .addGap(74, 74, 74)
+                                        .addComponent(nonWindowSeatEXLabel1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(wineTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(windowSeatEXLabel2)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(windowSeatEXLabel4)
+                                                .addGap(22, 22, 22))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(115, 115, 115)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(windowSeatEXLabel)
+                                .addGap(28, 28, 28)))
+                        .addGap(0, 8, Short.MAX_VALUE)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,10 +195,11 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(windowSeatEXLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(windowSeatEXLabel)
-                .addGap(4, 4, 4)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wSeatLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(windowSeatTextFiels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,7 +209,14 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
                     .addComponent(cookiesRButton)
                     .addComponent(nutsRButton)
                     .addComponent(nonWindowSeatEXLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nonWSeatLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wineTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(windowSeatEXLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(windowSeatEXLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(reserveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -187,14 +230,17 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_exitButtonActionPerformed
 
+    
     private void reserveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserveButtonActionPerformed
         Scanner readNameText=new Scanner(nameTextField.getText());
         Scanner seatNumReadText=new Scanner(windowSeatTextFiels.getText());
+        Scanner wineReadText=new Scanner(wineTextField.getText());
         
         int arr[]=new int[50];
         
         myTicket.setName(readNameText.nextLine().trim());
         myTicket.setSeatNum(seatNumReadText.nextInt());
+        myTicket.setWine(wineReadText.nextLine().trim());
         if(wantsCookies==true && wantsNuts == false){
             myTicket.setSnacks("Cookies");
         }else if(wantsNuts==true && wantsCookies==false){
@@ -225,10 +271,20 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
     }else{
             myTicket.setWindowSeat(0);
             }
-       // System.out.print(myTicket.display());
-       DisplayTicketGUI gui=new DisplayTicketGUI();
+        //System.out.print(myTicket.display());
+        DisplayTicketGUI gui=new DisplayTicketGUI();
         gui.setVisible(true);
         gui.setMyTicket(myTicket);
+        
+//        JFrame displayTicket=new JFrame("Here is your Tickets Information");
+//        JLabel displayTickInfo=new JLabel(myTicket.display());
+//        JPanel myPanel=new JPanel();
+//        
+//        myPanel.add(displayTicket);
+//        myPanel.add(displayTickInfo);
+//        
+//        displayTicket.setSize(500,500);
+        
     }//GEN-LAST:event_reserveButtonActionPerformed
 
     private void cookiesRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cookiesRButtonActionPerformed
@@ -256,20 +312,20 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BusinessChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FIrstClassChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BusinessChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FIrstClassChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BusinessChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FIrstClassChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BusinessChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FIrstClassChoicesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BusinessChoicesGUI().setVisible(true);
+                new FIrstClassChoicesGUI().setVisible(true);
             }
         });
     }
@@ -295,11 +351,17 @@ public class BusinessChoicesGUI extends javax.swing.JFrame {
     private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JLabel nonWSeatLabel1;
+    private javax.swing.JLabel nonWSeatLabel2;
     private javax.swing.JLabel nonWindowSeatEXLabel1;
     private javax.swing.JRadioButton nutsRButton;
     private javax.swing.JButton reserveButton;
     private javax.swing.JLabel wSeatLabel;
     private javax.swing.JLabel windowSeatEXLabel;
+    private javax.swing.JLabel windowSeatEXLabel1;
+    private javax.swing.JLabel windowSeatEXLabel2;
+    private javax.swing.JLabel windowSeatEXLabel3;
+    private javax.swing.JLabel windowSeatEXLabel4;
     private javax.swing.JTextField windowSeatTextFiels;
+    private javax.swing.JTextField wineTextField;
     // End of variables declaration//GEN-END:variables
 }
