@@ -13,6 +13,7 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
     private String departTime;
     private String departingCity;
     private String destCity;
+    private String departDate;
     /**
      * Creates new form ReserveTicketTypeGUI
      */
@@ -120,6 +121,7 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
         gui.myTicket.setDepartCity(departingCity);
         gui.myTicket.setDepartTime(departTime);
         gui.myTicket.setDestination(destCity);
+        gui.myTicket.setSeatPrice(150);
         gui.setVisible(true);
     }//GEN-LAST:event_economyButtonActionPerformed
 
@@ -128,6 +130,8 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
         gui.myTicket.setDepartCity(departingCity);
         gui.myTicket.setDepartTime(departTime);
         gui.myTicket.setDestination(destCity);
+        gui.myTicket.setDepartDate(departDate);
+        gui.myTicket.setSeatPrice(250);
         gui.setVisible(true);
     }//GEN-LAST:event_businessButtonjActionPerformed
 
@@ -136,6 +140,7 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
         gui.myTicket.setDepartCity(departingCity);
         gui.myTicket.setDepartTime(departTime);
         gui.myTicket.setDestination(destCity);
+        gui.myTicket.setSeatPrice(350);
         gui.setVisible(true);
     }//GEN-LAST:event_firstClassButtonActionPerformed
 
@@ -226,5 +231,19 @@ public class ReserveTicketTypeGUI extends javax.swing.JFrame {
      */
     public void setDestCity(String destCity) {
         this.destCity = destCity;
+    }
+
+    /**
+     * @return the departDate
+     */
+    public String getDepartDate() {
+        return departDate;
+    }
+
+    /**
+     * @param departDate the departDate to set
+     */
+    public void setDepartDate(String departDate) {
+        this.departDate = departDate;
     }
 }

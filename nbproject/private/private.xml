@@ -5,9 +5,15 @@
         <group>
             <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/FirstClassTickets.java</file>
             <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/MainMenuNewBorn.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/ReserveTicketTypeGUI.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/FIrstClassChoicesGUI.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/BusinessChoicesGUI.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/EconomyChoicesGUI.java</file>
             <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/EconomyTickets.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/PurchasePortalGUI.java</file>
             <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/NewBornAirlines.java</file>
             <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/BusinessTickets.java</file>
+            <file>file:/C:/Users/JRios15_17/Documents/NetBeansProjects/NewBornAirlines/src/newbornairlines/DisplayTicketGUI.java</file>
         </group>
     </open-files>
 </project-private>

@@ -18,6 +18,7 @@ public class EconomyTickets {
     private String departTime;
     private int seatNum;
     private int windowSeat;
+    private int seatPrice;
     
     public EconomyTickets(){
         name="";
@@ -28,6 +29,7 @@ public class EconomyTickets {
         departTime="";
         seatNum=0;
         windowSeat=0;
+        seatPrice=0;
     }
 
     /**
@@ -138,7 +140,7 @@ public class EconomyTickets {
         if(windowSeat==1){
             isWindSeat=true;
         }
-        return "Passenger's Name: "+name+"\n"+"Departing City: "+departCity+"\n"+"Destination: "+destination+"\n"+"Seat Number: "+seatNum+"\n"+"Date and Time of Departure: "+departDate+" at "+departTime+"\n"+"Is Window Seat? "+isWindSeat+"\n";
+        return "Passenger's Name: "+name+"\n"+"Price: "+ getSeatPrice() +"\n"+"Departing City: "+departCity+"\n"+"Destination: "+destination+"\n"+"Seat Number: "+seatNum+"\n"+"Date and Time of Departure: "+departDate+" at "+departTime+"\n"+"Is Window Seat? "+isWindSeat+"\n";
     }
     public void reserveTicket(){
     
@@ -156,5 +158,19 @@ public class EconomyTickets {
      */
     public void setWindowSeat(int windowSeat) {
         this.windowSeat = windowSeat;
+    }
+
+    /**
+     * @return the seatPrice
+     */
+    public int getSeatPrice() {
+        return seatPrice;
+    }
+
+    /**
+     * @param seatPrice the seatPrice to set
+     */
+    public void setSeatPrice(int seatPrice) {
+        this.seatPrice = seatPrice;
     }
 }

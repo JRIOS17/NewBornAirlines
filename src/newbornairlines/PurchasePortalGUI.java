@@ -41,6 +41,9 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
         destinationCity2 = new javax.swing.JLabel();
         welcomeLabel = new javax.swing.JLabel();
         exitButton = new javax.swing.JButton();
+        dateLabel = new javax.swing.JLabel();
+        date1 = new javax.swing.JLabel();
+        date2 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -97,6 +100,15 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
             }
         });
 
+        dateLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        dateLabel.setText("Date");
+
+        date1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        date1.setText("12/28/2019");
+
+        date2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        date2.setText("12/28/2019");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,17 +135,27 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(departCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(destinationCity2)
-                            .addComponent(destinationCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(destinationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(destinationCity2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(date2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(destinationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(destinationCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(date1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(exitButton)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,20 +166,23 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(timeLabel)
                     .addComponent(destinationLabel)
-                    .addComponent(departCityLabel1))
+                    .addComponent(departCityLabel1)
+                    .addComponent(dateLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(time1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reserveTime1)
                     .addComponent(departCity2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(destinationCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(destinationCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(date1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(reserveTime2)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(time2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(departCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(destinationCity2)))
+                        .addComponent(destinationCity2)
+                        .addComponent(date2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(exitButton)
                 .addGap(29, 29, 29))
@@ -171,6 +196,7 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
         gui.setDepartTime("10 AM - 11:30 AM");
         gui.setDepartingCity("Greensboro, NC");
         gui.setDestCity("Queens, NY");
+        gui.setDepartDate("12/28/2019");
         gui.setVisible(true);
     }//GEN-LAST:event_reserveTime1ActionPerformed
 
@@ -179,6 +205,7 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
         gui.setDepartTime("2 PM - 3:30 AM");
         gui.setDepartingCity("Greensboro, NC");
         gui.setDestCity("Queens, NY");
+        gui.setDepartDate("12/28/2019");
         gui.setVisible(true);
     }//GEN-LAST:event_reserveTime2ActionPerformed
 
@@ -224,6 +251,9 @@ public class PurchasePortalGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel date1;
+    private javax.swing.JLabel date2;
+    private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel departCity1;
     private javax.swing.JLabel departCity2;
     private javax.swing.JLabel departCityLabel1;
